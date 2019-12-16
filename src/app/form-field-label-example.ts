@@ -1,0 +1,26 @@
+import { Component } from "@angular/core";
+import { FormBuilder, FormGroup } from "@angular/forms";
+
+/** @title Form field with label */
+@Component({
+  selector: "form-field-label-example",
+  templateUrl: "form-field-label-example.html",
+  styleUrls: ["form-field-label-example.css"]
+})
+export class FormFieldLabelExample {
+  options: FormGroup;
+
+  pkmns = [
+    { name: "bulbasaur", number: 1 },
+    { name: "charmander", number: 4 },
+    { name: "squirtle", number: 7 }
+  ];
+
+  constructor(fb: FormBuilder) {
+    this.options = fb.group({ control: "" });
+  }
+}
+
+/**  Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
