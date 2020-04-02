@@ -19,6 +19,10 @@ export class FormFieldLabelExample {
   constructor(fb: FormBuilder) {
     this.options = fb.group({ control: "" });
   }
+
+  onClick( ){
+    return confirm('are you sure?')
+  }
 }
 
 /**  Copyright 2019 Google LLC. All Rights Reserved.
